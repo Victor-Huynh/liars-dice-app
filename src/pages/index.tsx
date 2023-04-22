@@ -24,8 +24,8 @@ import { RouterOutputs, api } from "~/utils/api";
 
 const Home: NextPage = () => {
   const user = useUser();
-  const hello = api.example.hello;
-  console.log(hello);
+  // const hello = api.example.hello;
+  // console.log(hello);
   return (
     <>
       <Head>
