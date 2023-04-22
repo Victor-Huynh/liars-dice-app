@@ -25,4 +25,6 @@ model Game {
     createdAt DateTime @default(now())
     host      User     @relation(fields: [hostID], references: [id])
     hostID    String
+
+    @@index([hostID])
 }
