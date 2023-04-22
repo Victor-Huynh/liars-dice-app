@@ -4,7 +4,7 @@ import { NavBar } from "~/components/navbar";
 
 import { RouterOutputs, api } from "~/utils/api";
 
-const Play: NextPage = () => {
+const Options: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,10 +14,10 @@ const Play: NextPage = () => {
       </Head>
       <NavBar />
       <main className="flex justify-center">
-        <div>Play page</div>
+        <div>Options page</div>
       </main>
     </>
   );
 };
 
-export default Play;
+export default Options;
