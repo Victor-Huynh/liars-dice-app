@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 body {
-    padding-top: 30px;
     @apply bg-black text-slate-100;
+}
+
+content {
+    padding-top: 30px;
 }
