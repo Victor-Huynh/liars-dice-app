@@ -5,14 +5,12 @@ import {
   Typography,
   Button,
   IconButton,
-  // Card,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import { SignInButton, SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export default function NavigationBar() {
   const [openNav, setOpenNav] = React.useState(false);
-  const user = useUser();
 
   React.useEffect(() => {
     window.addEventListener(
@@ -65,6 +63,16 @@ export default function NavigationBar() {
           </Link>
         </Typography>
       </SignedIn>
+      <SignedOut>
+        <SignInButton
+          mode="modal"
+        >
+          Log In
+        </SignInButton >
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </ul>
   );
 
@@ -80,17 +88,8 @@ export default function NavigationBar() {
             VVKH
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <SignedOut>
-              <SignInButton
-                mode="modal"
-              >
-                Log In
-              </SignInButton >
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
+            <div className="mr-4 hidden lg:block">{navList}
+            </div>
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -132,9 +131,6 @@ export default function NavigationBar() {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Log in</span>
-          </Button>
         </MobileNav>
       </Navbar>
     </>
