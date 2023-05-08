@@ -16,15 +16,14 @@ model User {
     displayName String   @db.VarChar(25)
     createdAt   DateTime @default(now())
     content     String   @db.VarChar(255)
-    Game        Game[]
+    // Game        Game[]
 }
 
 model Game {
     gameID    Int      @id @default(autoincrement())
     gameName  String   @db.VarChar(40)
     createdAt DateTime @default(now())
-    host      User     @relation(fields: [hostID], references: [id])
-    hostID    String
-
-    @@index([hostID])
+    // host      User     @relation(fields: [hostID], references: [id])
+    // hostID    String
+    // @@index([hostID])
 }

@@ -30,6 +30,22 @@ export const lobbiesRouter = createTRPCRouter({
         },
       });
     }),
+
+  createGame: publicProcedure
+    .input(GameSchema)
+    .mutation(async ({ ctx, input }) => {
+      const newGame = await ctx.prisma.game.create({
+        data: {
+          gameID: input.gameID,
+          gameName: input.gameName,
+          createdAt: input.createdAt,
+        },
+      });
+    }),
+
+  getAllGames: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.game.findMany();
+  }
 });
 // I want to get users from my database here called getuserfromdb
 // this should return a user object if it matches the id passed in

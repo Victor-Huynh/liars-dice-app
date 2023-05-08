@@ -30,6 +30,16 @@ export default function NavigationBar() {
           Lobbies
         </Link>
       </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal hover:font-bold"
+      >
+        <Link href="/cerberus" className="flex items-center">
+          Cerberus
+        </Link>
+      </Typography>
       <SignedIn>
         <Typography
           as="li"
