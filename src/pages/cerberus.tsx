@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 // import Head from "next/head";
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 const Cerberus: NextPage = () => {
     //     enum attackStates { COMBO = "COMBO", AUTO = "Auto", GHOSTS = "GHOSTS", LAVA = "LAVA" }
