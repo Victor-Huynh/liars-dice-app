@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
-import Head from "next/head";
-import { useEffect, useState } from "react";
+// import Head from "next/head";
+import { useEffect, useState } from 'react';
 
 const Cerberus: NextPage = () => {
     enum attackStates { COMBO = "COMBO", AUTO = "Auto", GHOSTS = "GHOSTS", LAVA = "LAVA" }
@@ -64,11 +64,11 @@ const Cerberus: NextPage = () => {
     return (
         <>
             <main>
-                <Head>
+                {/* <Head>
                     <title>Cerberus Tool</title>
                     <meta name="description" content="VVKH - Cerberus Tool for OSRS ghost skip" />
                     <link rel="icon" href="/favicon.ico" />
-                </Head>
+                </Head> */}
                 <div>TIMING: As the respawn timer hits 0, don&apos;t get it under 400</div>
                 <div>After #14-GHOSTS, put on Piety and kill, prefer to dump dmg specs at the very end</div>
                 <div>Ghosts spawn &lt;400 and lava spawns &lt;200</div>
