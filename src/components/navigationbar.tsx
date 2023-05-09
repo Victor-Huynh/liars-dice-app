@@ -30,7 +30,7 @@ export default function NavigationBar() {
           Lobbies
         </Link>
       </Typography>
-      <Typography
+      {/* <Typography
         as="li"
         variant="small"
         color="blue-gray"
@@ -39,7 +39,7 @@ export default function NavigationBar() {
         <Link href="/cerberus" className="flex items-center">
           Cerberus
         </Link>
-      </Typography>
+      </Typography> */}
       <SignedIn>
         <Typography
           as="li"
