@@ -21,28 +21,26 @@ const GameSchema = z.object({
 });
 
 export const lobbiesRouter = createTRPCRouter({
-  getGame: publicProcedure
-    .input(z.object({ gameID: z.number() }))
-    .query(({ ctx, input }) => {
-      return ctx.prisma.game.findMany({
-        where: {
-          gameID: input.gameID,
-        },
-      });
-    }),
-
-  createGame: publicProcedure
-    .input(GameSchema)
-    .mutation(async ({ ctx, input }) => {
-      const newGame = await ctx.prisma.game.create({
-        data: {
-          gameID: input.gameID,
-          gameName: input.gameName,
-          createdAt: input.createdAt,
-        },
-      });
-    }),
-
+  // getGame: publicProcedure
+  //   .input(z.object({ gameID: z.number() }))
+  //   .query(({ ctx, input }) => {
+  //     return ctx.prisma.game.findMany({
+  //       where: {
+  //         gameID: input.gameID,
+  //       },
+  //     });
+  //   }),
+  // createGame: publicProcedure
+  //   .input(GameSchema)
+  //   .mutation(async ({ ctx, input }) => {
+  //     const newGame = await ctx.prisma.game.create({
+  //       data: {
+  //         gameID: input.gameID,
+  //         gameName: input.gameName,
+  //         createdAt: input.createdAt,
+  //       },
+  //     });
+  //   }),
   // getAllGames: publicProcedure.query(({ ctx }) => {
   //   return ctx.prisma.game.findMany();
   // }

@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { type NextPage } from "next";
-import React, { FormEvent } from "react";
+import React from "react";
+// { FormEvent } 
 import NavigationBar from "~/components/navigationbar";
 
-import { RouterOutputs, api } from "~/utils/api";
+// import { RouterOutputs, api } from "~/utils/api";
 
 const Lobbies: NextPage = () => {
 

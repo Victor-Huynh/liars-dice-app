@@ -1,13 +1,13 @@
-import {
-  SignIn,
-  SignInButton,
-  SignOutButton,
-  SignUp,
-  useUser,
-} from "@clerk/nextjs";
+// import {
+//   SignIn,
+//   SignInButton,
+//   SignOutButton,
+//   SignUp,
+//   useUser,
+// } from "@clerk/nextjs";
 import { type NextPage } from "next";
 import NavigationBar from "~/components/navigationbar";
-import { RouterOutputs, api } from "~/utils/api";
+// import { RouterOutputs, api } from "~/utils/api";
 
 // type PostWithUser = RouterOutputs["posts"]["getAll"][number];
 // const PostView = (props: PostWithUser) => {

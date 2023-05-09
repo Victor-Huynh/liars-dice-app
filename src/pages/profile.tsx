@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import NavigationBar from "~/components/navigationbar";
 
-import { RouterOutputs, api } from "~/utils/api";
+// import { RouterOutputs, api } from "~/utils/api";
 
 const Profile: NextPage = () => {
   return (
