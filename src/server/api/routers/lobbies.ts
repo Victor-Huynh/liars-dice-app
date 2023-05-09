@@ -43,9 +43,9 @@ export const lobbiesRouter = createTRPCRouter({
       });
     }),
 
-  getAllGames: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.game.findMany();
-  }
+  // getAllGames: publicProcedure.query(({ ctx }) => {
+  //   return ctx.prisma.game.findMany();
+  // }
 });
 // I want to get users from my database here called getuserfromdb
 // this should return a user object if it matches the id passed in
